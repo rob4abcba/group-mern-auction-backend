@@ -68,5 +68,6 @@ const EntrySchema = new mongoose.Schema({
 const AuctionItems = mongoose.model("AuctionItem", AuctionItemSchema);
 const Users = mongoose.model("User", UserSchema);
 const Bids = mongoose.model("Bid", BidSchema);
+const Entries = mongoose.model("Entry", EntrySchema);
 
-module.exports = { AuctionItems, Users, Bids };
+module.exports = { AuctionItems, Users, Bids, Entries };
