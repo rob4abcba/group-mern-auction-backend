@@ -55,19 +55,21 @@ const BidSchema = new mongoose.Schema({
   },
 });
 
-const EntrySchema = new mongoose.Schema({
-  //MG: More formal to include keyword 'new'
-  _id: Number,
-  title: String,
-  category: String,
-  description: String,
-  startbid: Number,
-  photo: String,
-});
+// EntrySchema is exactly the same and redundant with AuctionItemSchema
+// const EntrySchema = new mongoose.Schema({
+//   //MG: More formal to include keyword 'new'
+//   _id: Number,
+//   title: String,
+//   category: String,
+//   description: String,
+//   startbid: Number,
+//   photo: String,
+// });
 
-const AuctionItems = mongoose.model("AuctionItem", AuctionItemSchema);
-const Users = mongoose.model("User", UserSchema);
-const Bids = mongoose.model("Bid", BidSchema);
-const Entries = mongoose.model("Entry", EntrySchema);
+const AuctionItemsModel = mongoose.model("AuctionItem", AuctionItemSchema);
+const UsersModel = mongoose.model("User", UserSchema);
+const BidsModel = mongoose.model("Bid", BidSchema);
+// const EntriesModel = mongoose.model("Entry", EntrySchema);
 
-module.exports = { AuctionItems, Users, Bids, Entries };
+// module.exports = { AuctionItemsModel, UsersModel, BidsModel, EntriesModel };
+module.exports = { AuctionItemsModel, UsersModel, BidsModel };
