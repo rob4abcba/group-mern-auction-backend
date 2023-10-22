@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const AuctionItemSchema = mongoose.Schema({
+const AuctionItemSchema = new mongoose.Schema({
+  //MG: More formal to include keyword 'new'
   _id: Number,
   title: String,
   category: String,
@@ -54,7 +55,8 @@ const BidSchema = new mongoose.Schema({
   },
 });
 
-const EntrySchema = mongoose.Schema({
+const EntrySchema = new mongoose.Schema({
+  //MG: More formal to include keyword 'new'
   _id: Number,
   title: String,
   category: String,
