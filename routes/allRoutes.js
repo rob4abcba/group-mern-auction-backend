@@ -5,7 +5,7 @@ let getFields = multer();
 
 // module.exports = { AuctionItems, Users, Bids };
 // module.exports = { AuctionItemsModel, UsersModel, BidsModel, EntriesModel };
-module.exports = { AuctionItemsModel, UsersModel, BidsModel };
+// module.exports = { AuctionItemsModel, UsersModel, BidsModel };
 
 // const { AuctionItems, Users, Bids } = require("../models/allSchemas");
 const {
