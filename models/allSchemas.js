@@ -66,10 +66,14 @@ const BidSchema = new mongoose.Schema({
 //   photo: String,
 // });
 
-const AuctionItemsModel = mongoose.model("AuctionItem", AuctionItemSchema);
-const UsersModel = mongoose.model("User", UserSchema);
-const BidsModel = mongoose.model("Bid", BidSchema);
-// const EntriesModel = mongoose.model("Entry", EntrySchema);
+const AuctionItems = mongoose.model("AuctionItem", AuctionItemSchema);
+const Users = mongoose.model("User", UserSchema);
+const Bids = mongoose.model("Bid", BidSchema);
+
+// const AuctionItemsModel = mongoose.model("AuctionItem", AuctionItemSchema);
+// const UsersModel = mongoose.model("User", UserSchema);
+// const BidsModel = mongoose.model("Bid", BidSchema);
 
 // module.exports = { AuctionItemsModel, UsersModel, BidsModel, EntriesModel };
-module.exports = { AuctionItemsModel, UsersModel, BidsModel };
+module.exports = { AuctionItems, Users, Bids };
+// module.exports = { AuctionItemsModel, UsersModel, BidsModel };

@@ -26,16 +26,18 @@ const db = (module.exports = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("MongoDB Connection is Successful");
+    console.log("MongoDB Connection SUCCESSFUL");
   } catch (error) {
     console.log(error);
-    console.log("MongoDB Connection is failed");
+    console.log("MongoDB Connection FAILED :-( ");
   }
 });
 db();
 
 app.use("/", (req, res, next) => {
-  console.log("A new request received at " + new Date(Date.now()));
+  console.log(
+    "LiveAuction BackEnd: New request received at " + new Date(Date.now())
+  );
   next();
 });
 
@@ -43,6 +45,6 @@ app.use("/", allRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(
-    `LiveAuction BackEnd listening at http://localhost:${process.env.PORT}`
+    `LiveAuction BackEnd: Listening at http://localhost:${process.env.PORT}`
   );
 });
